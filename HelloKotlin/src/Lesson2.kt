@@ -1,4 +1,4 @@
-
+import java.util.*
 
 fun main(args: Array<String>) {
     println("Hello Kotlin")
@@ -81,4 +81,55 @@ fun main(args: Array<String>) {
         in 3..12 -> println("Good fish name")
         else -> println("OK fish name")
     }
+
+    // Arrays and Loops
+    val myList = mutableListOf("tuna", "salmon", "shark")
+    // myList = mutableListOf("test") compile error => can't assign to other list
+    // but still can modify
+    myList.remove("shark")
+    myList.add("whale")
+    println(myList)
+
+    val swarm = listOf(12, 5)
+    val school = arrayOf("hua", "hut", "ftu")
+    val number = intArrayOf(12, 45, 67)
+    val mix = arrayOf(2, "fish")
+    println(Arrays.toString(school))
+
+    // nested array
+    val bigSwarm = arrayOf(swarm, arrayOf("dolphin", "whale", "orka"))
+    println(Arrays.toString(bigSwarm))
+
+    // init array with dynamic code
+    val array = Array(5) { it * 2}
+    println(array.toList())
+
+    for (element in array) println(element)
+
+    for ((index, element) in myList.withIndex()) {
+        println("Fish at $index is $element")
+    }
+
+    for (i in 'b'..'g') print(i)
+    println()
+    for (i in 1..5) print(i)
+    println()
+    for (i in 5 downTo 1) print(i)
+    println()
+    for (i in 3..6 step 2) print(i)
+    println()
+    println("Practice")
+    val numbers = Array(5) { it + 11}
+    println(numbers.toList())
+    val strings: MutableList<String> = mutableListOf()
+    for (i in numbers) {
+        strings.add(i.toString())
+    }
+    println(strings)
+
+    var list3: MutableList<Int> = mutableListOf()
+    for (i in 0..100 step 7) list3.add(i)
+    println(list3)
+
+    for (i in 0..100 step 7) print(i.toString() + " - ")
 }
