@@ -11,5 +11,7 @@
 
     <color name="toolbarIconColor">#FFCF44</color>
     <color name="loginPageBackgroundColor">#414149</color>
-    <color name="productGridBackgroundColor">#414149</color>
+    <!--<color name="productGridBackgroundColor">#414149</color>-->
+    <color name="productGridBackgroundColor">#FFFBFA</color>
+
 </resources>
